@@ -13,7 +13,7 @@ An example application using AnguarJS/Bootstrap as frontend and Spring MVC as RE
 
 _I appreciate any contribution for this project, including suggestions, documentation improvements, reporting issues, forks and bugfixs,  etc. I have found there are some unrelated issues added, before you file an issue, please **READ THE STEPS IN THIS README.md**  carefully_.
 
-**在你提交 ISSUE 前，请务必确认已经严格完成了本文中描述的操作步骤**。
+
 
 Thank the DevFactory team member [@misgersameer](https://github.com/misgersameer) for sending several PRs to improve the code quaulity according to the sonar rules.
 
@@ -43,7 +43,7 @@ Thank the DevFactory team member [@misgersameer](https://github.com/misgersameer
 2. And enter the root folder, run `mvn tomcat7:run` to start up an embedded tomcat7 to serve this application.
   
    ```
-    mvn tomcat7:run
+    mvn jetty:run ,mvn tomcat7:run
    ```
 
 3. Go to [http://localhost:8080/angularjs-springmvc-sample/](http://localhost:8080/angularjs-springmvc-sample/) to test it. If you want to explore the REST API docs online, there is a *Swagger UI* configured for visualizing the REST APIs, just go to [http://localhost:8080/angularjs-springmvc-sample/swagger-ui.html](http://localhost:8080/angularjs-springmvc-sample/swagger-ui.html).
