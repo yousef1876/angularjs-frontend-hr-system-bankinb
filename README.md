@@ -9,13 +9,6 @@ feathers:
 
 
 
-_I appreciate any contribution for this project, including suggestions, documentation improvements, reporting issues, forks and bugfixs,  etc. I have found there are some unrelated issues added, before you file an issue, please **READ THE STEPS IN THIS README.md**  carefully_.
-
-
-
-Thank the DevFactory team member [@misgersameer](https://github.com/misgersameer) for sending several PRs to improve the code quaulity according to the sonar rules.
-
-
 ## Requirements
 
 * JDK 8
