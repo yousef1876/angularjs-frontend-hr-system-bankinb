@@ -51,3 +51,4 @@ Thank the DevFactory team member [@misgersameer](https://github.com/misgersameer
 ## Spring Boot
 
 If you are interested in Spring Boot, I have moved the `boot` branch into a new project [angularjs-springmvc-sample-boot](https://github.com/hantsy/angularjs-springmvc-sample-boot).
+# angularjs-frontend-hr-system-bankinb

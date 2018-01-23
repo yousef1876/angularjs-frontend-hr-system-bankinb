@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hantsylabs.restexample.springmvc</groupId>
-    <artifactId>angularjs-springmvc-sample</artifactId>
+    <groupId>com.framework.core.springmvc</groupId>
+    <artifactId>angularjs-ngapp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>war</packaging>
@@ -84,6 +84,13 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        
+        
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1211</version>
         </dependency>
         
         <!-- Spring BOM -->
@@ -413,6 +420,21 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.hateoas</groupId>
+            <artifactId>spring-hateoas</artifactId>
+            <version>0.12.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>1.2.1.RELEASE</version>
+            <type>pom</type>
+        </dependency>
+        
+        
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -422,14 +444,14 @@
                 <excludes>
                     <exclude>**/*.xls</exclude>
                 </excludes>
-                <filtering>true</filtering>
+                <!--<filtering>true</filtering>-->
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>**/*.xls</include>
                 </includes>
-                <filtering>false</filtering>
+                <!--<filtering>false</filtering>-->
             </resource>
 
             <resource>
@@ -530,7 +552,7 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
-                <executions>
+                <!-- <executions>
                     <execution>
                         <phase>process-classes</phase>
                         <goals>
@@ -538,7 +560,7 @@
                             <goal>test-compile</goal>
                         </goals>
                     </execution>
-                </executions>
+                </executions> -->
                 <configuration>
                     <outxml>true</outxml>
                     <aspectLibraries>
@@ -602,7 +624,7 @@
                     <stopPort>8005</stopPort>
                     <stopKey>STOP</stopKey>
                     <webApp>
-                        <contextPath>/angularjs-springmvc-sample</contextPath>
+                        <contextPath>/ngapp</contextPath>
                     </webApp>
                 </configuration>
                 <executions>
@@ -651,7 +673,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <path>/angularjs-springmvc-sample</path>
+                    <path>/ngapp</path>
                 </configuration>
             </plugin>
 
@@ -733,7 +755,7 @@
                 <resources>
                     <resource>
                         <directory>src/main/resources-dev</directory>
-                        <filtering>true</filtering>
+                        <!--<filtering>true</filtering>-->
                     </resource>
                 </resources>
             </build>
@@ -766,7 +788,7 @@
                 <resources>
                     <resource>
                         <directory>src/main/resources-staging</directory>
-                        <filtering>true</filtering>
+                        <!--<filtering>true</filtering>-->
                     </resource>
                 </resources>
             </build>
@@ -798,7 +820,7 @@
                 <resources>
                     <resource>
                         <directory>src/main/resources-prod</directory>
-                        <filtering>true</filtering>
+                        <!--<filtering>true</filtering>-->
                     </resource>
                 </resources>
             </build>

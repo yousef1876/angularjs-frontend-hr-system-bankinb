@@ -14,23 +14,17 @@
         //configure the rounting of ng-view
         $routeProvider
                 .when('/',
-                        {templateUrl: 'partials/home.html',
+                        {templateUrl: 'main.html',
                             publicAccess: true})
-                .when('/home',
-                        {templateUrl: 'partials/home.html',
+                .when('/dashboard',
+                        {templateUrl: 'partials/dashboard.html',
                             publicAccess: true})
-                .when('/login',
-                        {templateUrl: 'partials/login.html',
+                .when('/logout',
+                        {templateUrl: 'partials/sign-in.html',
                             publicAccess: true})
-                .when('/posts',
+                .when('/signup',
                         {controller: 'PostsController',
-                            templateUrl: 'partials/posts/home.html'})
-                .when('/posts/new',
-                        {controller: 'NewPostController',
-                            templateUrl: 'partials/posts/new.html'})
-                .when('/posts/:id',
-                        {controller: 'DetailsController',
-                            templateUrl: 'partials/posts/details.html'});
+                            templateUrl: 'partials/posts/home.html'});
 
 
         //configure $http to catch message responses and show them
